@@ -18,3 +18,16 @@ footer {
     margin: 0px; 
     padding: 10px;
 }
+a:visited {
+    background-color: aqua; color: chocolate;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+a:active {
+    color: pink;
+    background-color: green;
+}
