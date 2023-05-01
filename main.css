@@ -5,13 +5,13 @@ body {
     margin: 0px;
 }
 header {
-    background-color: black;
+    background: linear-gradient(to right, red, orange, green, blue, darkblue, violet);
     color: lightgreen; 
     padding: 10px; 
     font-size: 16pt;
 }
 footer {
-    background-color: lightblue; 
+    background: linear-gradient(to right, red, orange, green, blue, darkblue, violet);
     color: brown; 
     font-family: italic; 
     font-size: 14pt; 
