@@ -31,3 +31,6 @@ a:active {
     color: pink;
     background-color: green;
 }
+main {
+    margin: 10px 20px;
+}
