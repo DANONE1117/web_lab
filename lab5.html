@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function showSum() {
-            let a = 5154;
-            let b = 7891;
+            let inputA = document.getElementById('numberA'); 
+            // здесь мы обращаемся к глобальному объекту и используем метод
+            let inputB = document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value); 
+            // parseInt переводит строчное значение в числовое
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна '+ result);
+// слово let означает "создать переменную"
+//  alert – она просто выводит на экран требуемое сообщение:
         }
         function showAuthor() {
             let author = "Автор страницы:\nКовылин Даниил Артурович\nУ плохого студента нет цели, есть только путь, тяжелый и невыносимый путь...";
@@ -38,10 +44,15 @@
     </header>
     
     <main>
-        <div class="massage" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="massage" onclick="showAuthor()">Узнать, кто автор страницы</div>
+        <label>Первое число: <input type="number" value="5154" id="numberA"></label><br> 
+        <!-- Label дополнительная функциональность, для фокуса не только на поле ввода но и на текст "Первое число" -->
+        <!-- value – это значение, которое будет отображаться в поле ввода при загрузке страницы. Если value не указывать, то поле ввода изначально будет пустым: -->
     </main>
 
+        <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
+        <div class="massage" onclick="showSum()">Найти сумму чисел</div>
+        <div class="massage" onclick="showAuthor()">Узнать, кто автор страницы</div>
+        <!-- Чтобы запустить какой-то код при нажатии используется атрибут onclick – в него просто прописывается нужная функция: -->
     <footer onclick="showAuthor()">
         &copy; Ковылин Даниил, ФБИ-14, 2 курс, 2023
     </footer>
