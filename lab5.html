@@ -46,7 +46,7 @@
             alert('Произведение '+ a + ' и '+ b + ' равна ' +  result);
         }
         function showAuthor() {
-            let author = "Автор страницы:\nКовылин Даниил Артурович\nУ плохого студента нет цели, есть только путь, тяжелый и невыносимый путь...";
+            let author = "Автор страницы:\nКовылин Даниил Артурович\nУ студента нет цели, есть только путь, тяжелый и невыносимый путь...";
             alert(author);
         }
         function changeOutput(buttomNum, backColor, textColor, borderColor) {
@@ -55,6 +55,21 @@
             output.style.backgroundColor = backColor;
             output.style.color = textColor;
             output.style.borderColor = borderColor;
+        }
+        function Korz(){
+            let inputA = document.getElementById('numA');
+            let inputB = document.getElementById('numB');
+            let inputC = document.getElementById('numC');
+            let inputD = document.getElementById('numD');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+            let result = a*100 + b*80 + c*150 + d*300;
+            let output1=document.getElementById('output1')
+            output1.innerHTML = 'Общая цена ' + result + 'p.'
+            
         }
     </script>
     <style>
@@ -73,6 +88,19 @@
             border: 5px solid;
             width: 300px;
             height: 40px;
+        }
+        .korzina {
+            cursor: pointer;
+            
+            height: 350px;
+            width: 300px;
+            padding: 7px;
+            background-color: greenyellow;
+            border-color: black;
+            border: 1px solid;
+            border-radius: 7px;
+            display: inline-block;
+
         }
     </style>
 </head>
@@ -102,6 +130,23 @@
         </div>
         <div id="output"></div>
 
+        <div class="korzina"> <h2>Корзина Товаров</h2> 
+            Яблоки 100р/шт
+            <div><input type="number" value="0" id="numA"</div><br>
+               <br>
+            <div>Груши 80р/шт</div>
+            <label><input type="number" value="0" id="numB"></label><br>
+               <br>
+            <div>Апельсины 150р/шт</div>
+            <label><input type="number" value="0" id="numC"></label><br>
+               <br>
+            <div>Дыни 300р/шт</div>
+            <label><input type="number" value="0" id="numD"></lable><br>
+               <br>
+            <label> <input type="button" value="Рассчитать" onclick="Korz()"></label><br>
+             <br>
+            <div id="output1"> </div>
+           </div>
     <footer onclick="showAuthor()">
         &copy; Ковылин Даниил, ФБИ-14, 2 курс, 2023
     </footer>
