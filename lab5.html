@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ковылин Даниил Артурович. Лабораторная работа 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert('Сумма ' + a + ' и ' + b + ' равна '+ result);
+        }
+    </script>
+    <style>
+        .massage {
+            display: inline-block;
+            cursor: pointer;
+            color: maroon;
+            background-color: gray;
+            text-align: center;
+            border: 1px solid;
+            text-indent: 0;
+            margin: 10px 40px 10px 10px;
+            padding: 5px; /*отступы со всех сторон внутри элемента*/
+        }
+    </style>
 </head>
 <body>
     <header>
-        НГТУ, ФБ, Лабораторная работа 4
+        НГТУ, ФБ, Лабораторная работа 5
     </header>
     
     <main>
+        <div class="massage" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="massage">Узнать, кто автор страницы</div>
     </main>
-    
+
     <footer>
         &copy; Ковылин Даниил, ФБИ-14, 2 курс, 2023
     </footer>
