@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ковылин Даниил Артурович. РГЗ</title>
+    <link rel="stylesheet" href="rgz.css">
+<style>
+
+    .map{
+        width: 100%;
+        height: 300px;
+        margin: 40px auto;
+    }
+    .map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+    }
+    .centre{
+        margin-top: -570px;
+        margin-right: 0%;
+        
+    }
+</style>
+<head>
+
+<body>
+    <div class="icon" onclick="showPanel()"></div>
+    <div class="panel" id="panel">
+        <a href="1.html">О компании</a>
+        <a href="2.html">Основные финансовые показатели</a>
+        <a href="3.html">Контактные данные</a>
+        <a href="4.html">Видео</a>
+    </div>
+    <script type="text/javascript">
+        function showPanel() {
+        var panel = document.getElementById('panel');
+        if (panel.style.display === 'none') {
+        panel.style.display = 'block';
+        } else {
+        panel.style.display = 'none';
+        }
+        }
+    </script>
+
+    <main>
+        <h1>OR GROUP Контакты</h1>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d886.0822834356852!2d82.96534946770602!3d55.10734502607463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfeff73d132cbd%3A0x581ec8cc1c5788c7!2z0YPQuy4g0JHQvtCz0LTQsNC90LAg0KXQvNC10LvRjNC90LjRhtC60L7Qs9C-LCA1Niwg0J3QvtCy0L7RgdC40LHQuNGA0YHQuiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQutCw0Y8g0L7QsdC7LiwgNjMwMTEw!5e0!3m2!1sru!2sru!4v1685712757535!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <h2><b><u>Реквизиты</u></b></h2>
+        <p>
+            Юр.адрес: 115114, г. Москва, ул. Летниковская, д. 10, стр. 4, эт. 2, пом. 1, ком. 70.
+        </p>          
+        <p>Фактический адрес: 630110, г. Новосибирск, ул. Богдана Хмельницкого, 56.</p>           
+        <p>Тел.: (383) 280-80-26</p>
+        <p>Почта: rozn05@obuvrus.ru</p>
+        <div> </div>
+    </main>
+
+   
+</body>
+</html>

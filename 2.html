@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ковылин Даниил Артурович. РГЗ</title>
+    <link rel="stylesheet" href="rgz.css">
+
+<head>
+
+<body>
+    <div class="icon" onclick="showPanel()"></div>
+    <div class="panel" id="panel">
+        <a href="1.html">О компании</a>
+        <a href="2.html">Основные финансовые показатели</a>
+        <a href="3.html">Контактные данные</a>
+        <a href="4.html">Видео</a>
+    </div>
+    <script type="text/javascript">
+        function showPanel() {
+        var panel = document.getElementById('panel');
+        if (panel.style.display === 'none') {
+        panel.style.display = 'block';
+        } else {
+        panel.style.display = 'none';
+        }
+        }
+    </script>
+
+    <main>
+        <h1>Основные финансовые показатели</h1>
+        <p>Текущая рыночная капитализация компании OR GROUP составляет 10.0 млрд руб.</p>
+        <p>Общее число акций, обращающихся на Московской бирже: 1 млн</p>
+        <h2>Таблица с ценами закрытия за апрель</h2>
+        <table>
+            <thead>
+             <tr>
+              <th>Дата</th>
+              <th>Цена закрытия</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>1 апреля 2023</td>
+              <td>0.682</td>
+             </tr>
+             <tr>
+              <td>2 апреля 2023</td>
+              <td>0.72</td>
+             </tr>
+             <tr>
+              <td>3 апреля 2023</td>
+              <td>0.746</td>
+             </tr>
+             <tr>
+              <td>4 апреля 2023</td>
+              <td>0.764</td>
+             </tr>
+             <tr>
+              <td>5 апреля 2023</td>
+              <td>0.72</td>
+             </tr>
+             <tr>
+              <td>6 апреля 2023</td>
+              <td>0.74</td>
+             </tr>
+            </tbody>
+          </table>
+        <div id="min" ></div>
+        <div id="max" ></div>
+        <div id="otklonenie"></div>
+        
+        <script>
+            let data = ['1.04.2023', '2.04.2023', '3.04.2023', '4.04.2023', '5.04.2023',
+                        '6.04.2023'];
+            let kurs = [0.682, 0.72, 0.746, 0.764, 0.72, 0.74];
+                let min = Math.min(...kurs);
+                document.getElementById('min').innerHTML = 'Минимальное значение: ' + min;
+                let max = Math.max(...kurs);
+                document.getElementById('max').innerHTML = 'Максимальное значение: ' + max;
+                let sum = 0;
+                for (let i = 0; i < kurs.length; i++) {
+                sum += kurs[i];
+                }
+                let avg = sum / kurs.length;
+                let variance = 0;
+                for (let i = 0; i < kurs.length; i++) {
+                variance += Math.pow(kurs[i] - avg, 2);
+                }
+                let otklonenie = Math.sqrt(variance / kurs.length);
+                document.getElementById('otklonenie').innerHTML = 'Среднеквадратическое отклонение: ' + otklonenie;
+            
+        </script>
+    </main>
+
+   
+</body>
+</html>
