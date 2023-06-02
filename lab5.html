@@ -71,6 +71,10 @@
             output1.innerHTML = 'Общая цена ' + result + 'p.'
             
         }
+        function removekrugi(number) {
+            let del = document.getElementById(number)
+            del.style.opacity = '0'
+        }   
     </script>
     <style>
         .message {
@@ -102,6 +106,52 @@
             display: inline-block;
 
         }
+        
+        .krugi div {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            line-height: 67px;
+            margin-right: 20px;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 30px;
+            border: 1px solid;
+            }
+
+        .krug1 {
+            background-color: aqua;
+        }
+        .krug2 {
+            background-color: red;
+        }
+        .krug3 {
+            background-color: green;
+        }
+        .krug4 {
+            background-color: Fuchsia;
+        }
+        .krug5 {
+            background-color: Olive;
+        }
+        .krug6 {
+            background-color: Lime;
+        }
+        .krug7 {
+            background-color: Blue;
+        }
+        .krug8 {
+            background-color: aquamarine;
+        }
+        .krug9 {
+            background-color: DarkKhaki;
+        }
+        .krug10 {
+            background-color: HotPink;
+        }
     </style>
 </head>
 <body>
@@ -113,7 +163,6 @@
         <label>Первое число: <input type="number" value="5154" id="numberA"></label><br> 
         <!-- Label дополнительная функциональность, для фокуса не только на поле ввода но и на текст "Первое число" -->
         <!-- value – это значение, которое будет отображаться в поле ввода при загрузке страницы. Если value не указывать, то поле ввода изначально будет пустым: -->
-    </main>
 
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
         <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
@@ -147,6 +196,21 @@
              <br>
             <div id="output1"> </div>
            </div>
+
+           <div class="krugi">
+            <div class="krug1" id="1" onclick="removekrugi('1')">1</div>
+            <div class="krug2" id="2" onclick="removekrugi('2')">2</div>
+            <div class="krug3" id="3" onclick="removekrugi('3')">3</div>
+            <div class="krug4" id="4" onclick="removekrugi('4')">4</div>
+            <div class="krug5" id="5" onclick="removekrugi('5')">5</div>
+            <div class="krug6" id="6" onclick="removekrugi('6')">6</div>
+            <div class="krug7" id="7" onclick="removekrugi('7')">7</div>
+            <div class="krug8" id="8" onclick="removekrugi('8')">8</div>
+            <div class="krug9" id="9" onclick="removekrugi('9')">9</div>
+            <div class="krug10" id="10" onclick="removekrugi('10')">10</div>
+            </div>
+    </main>
+
     <footer onclick="showAuthor()">
         &copy; Ковылин Даниил, ФБИ-14, 2 курс, 2023
     </footer>

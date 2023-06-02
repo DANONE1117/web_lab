@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(203, 234, 228);
+    color: black;
+    font-family:  'Times New Roman', Times, serif;
+    letter-spacing:  1px; /*свойство отвечает за расстояние между буквами*/
+    margin: 0px;
+}
+
+main {
+    margin: 10px 20px;
+}
+.icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url('Обувь_России.png');
+    background-size: cover;
+    cursor: pointer;
+   }
+   .panel {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 80px;
+    width: 200px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1;
+   }
+   .panel a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+   }
+a {
+    text-decoration: none;
+    color: rgb(213, 156, 0);
+    margin-right: 30px;
+}
+a:hover {
+background-color: white;
+border-radius: 30px;
+}
+h1 {
+    font-size: 2em;
+    margin-top: 100px;
+  }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+   }
+th {
+    background-color: #eee;
+   }
