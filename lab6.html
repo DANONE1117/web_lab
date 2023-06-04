@@ -51,6 +51,18 @@
             transition: 1000ms;
             transform: rotate(0);
         }
+        .block{
+            width: 100px;
+            cursor: pointer;
+            height: 70px;
+            position: relative;
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            border-radius: 30px;
+            left: 350px;
+            top: 60px;
+        }
+
     </style>
     <script>
         let number;
@@ -132,7 +144,8 @@
             div.style.color = 'rgb(121, 44, 44)';
             document.getElementById('color-name').innerHTML = 'желтый';
            }
-           function plase(smena) {
+        }
+        function plase(smena) {
         if (smena.style.left == '0px'){
             smena.style.left = '1000px';
             if (smena.style.transform = 'rotate(0)'){
@@ -146,6 +159,14 @@
             }
           }
         }
+       
+        function block(x) {
+            if(parseInt(x.style.width)<=1000){
+                x.style.width = parseInt(x.style.width) +50 + 'px';
+            }
+            else {
+                x.style.width = '100px'
+            }
 
         }
     </script>
@@ -206,6 +227,8 @@
         </div>
 
         <div class="shelk" onclick="plase(this)">Щелкни меня</div>
+
+        <div class="block" onclick="block(this)""></div>
 
     </main>
 
