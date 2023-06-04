@@ -22,6 +22,18 @@
             width: 150px;
             padding: 15px 10px;
         }
+        .color{
+            border-radius: 5px;
+            border: 2px solid rgb(121, 44, 44);
+            background-color: rgb(255, 255, 60);
+            color: rgb(121, 44, 44);
+            position: relative;
+            left: 250px;
+            margin: auto;
+            width: 200px;
+            padding: 10px 20px;
+            text-align: center;
+        }
     </style>
     <script>
         let number;
@@ -77,6 +89,33 @@
                 scrin[1].style.display = 'none';
                 scrin[0].style.display = 'block';
             }
+            function changeColor(div) {
+           if(div.style.backgroundColor == 'yellow') {
+            div.style.backgroundColor = 'red';
+            div.style.color = 'blue';
+            document.getElementById('color-name').innerHTML = 'красный';
+           }
+           else if(div.style.backgroundColor == 'red') {
+            div.style.backgroundColor = 'black';
+            div.style.color = 'yellow';
+            document.getElementById('color-name').innerHTML = 'черный';
+           }
+           else if(div.style.backgroundColor == 'black') {
+            div.style.backgroundColor = 'purple';
+            div.style.color = 'black';
+            document.getElementById('color-name').innerHTML = 'фиолетовый';
+           }
+           else if(div.style.backgroundColor == 'purple') {
+            div.style.backgroundColor = 'pink';
+            div.style.color = 'green';
+            document.getElementById('color-name').innerHTML = 'розовый';
+           }
+           else {
+            div.style.backgroundColor = 'yellow';
+            div.style.color = 'rgb(121, 44, 44)';
+            document.getElementById('color-name').innerHTML = 'желтый';
+           }
+        }
     </script>
 </head>
 
@@ -127,6 +166,11 @@
             <li>попробуйте ввести новое число</li>
             <li>убедитесь, что вводите правильный диапазон</li>
             </ol>
+        </div>
+
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет:<span id="color-name">желтый</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
 
     </main>
