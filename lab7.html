@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
         }
         function showExchange(){
             let exchange = [79.9694, 79.3271, 78.5739, 76.4407, 76.6929,
-                           75.2146, 77.2041, 79.1044, 79.9798, 80.3git 642];
+                           75.2146, 77.2041, 79.1044, 79.9798, 80.3642];
             let table = document.getElementById('dollar-exchange');
             for(let i = 0; i<exchange.length; i++){
                 let tr = document.createElement('tr');
@@ -34,6 +34,17 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение' + average;
         }
+        function atb(){
+            let colors = document.getElementById('trbl');
+            for(let i = 0; i<10; i++){
+                let box = document.createElement('div');
+                box.style.width = '50px';
+                box.style.height = '50px';
+                box.style.backgroundColor = 'red';
+                box.style.opacity = i/10;
+                colors.appendChild(box);
+            }
+        }
         
     </script>
 </head>
@@ -48,6 +59,10 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="atb()">Создать полупрозрачные блоки</button>
+        <div id="trbl"></div>
+
     </main>
     <footer>
 
