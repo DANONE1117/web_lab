@@ -63,6 +63,16 @@
                 circles.appendChild(circle);
             }
         }
+        function umn() {
+            let b = document.getElementById('um');
+            for (let i = 13; i < 34; i++){
+                let n = document.createElement('div');
+                n.innerHTML = i + '*' + 29 + '='+ (i*29);
+                n.style.color = 'purple'
+                b.appendChild(n);
+            
+            }
+        }
     </script>
 </head>
 <body>
@@ -84,6 +94,9 @@
         <input type="number" value="5" placeholder="Введите число кругов" id="numCurcles">
         <button onclick="createCircles()">синий/красный</button>
         <div id="circles"></div>
+
+        <button onclick="umn()">Умножение на 21</button>
+        <div id="um"></div>
     </main>
     <footer>
 
