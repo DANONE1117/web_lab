@@ -23,3 +23,11 @@ function showDate () {
     let todayBE = new Date();
     BE.innerHTML = 'Дата и время для бельгийской локали: ' + todayBE.toLocaleString("fr-BE");
 }
+function showDaysCount () {
+    let today = new Date();
+    let inputDate = document.querySelector("input[type=date]");
+    let DR = new Date(inputDate.value);
+    let daysCount = (today - DR)/1000/60/60/24;
+    document.getElementById("day").innerHTML = 'Количество дней с даты рождения: ' + daysCount.toFixed(0);
+    
+}
