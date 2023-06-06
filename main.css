@@ -17,6 +17,9 @@ footer {
     font-size: 14pt; 
     margin: 0px; 
     padding: 10px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 a:visited {
     background-color: aqua; color: chocolate;
